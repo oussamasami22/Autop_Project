@@ -30,32 +30,32 @@ public class DriverServiceImpl  implements DriverServiice {
     public void deleteDriver(Long id) {
 
     }
-    // private final DriverRepository driverRepository;
-    //    public DriverServiceImpl(DriverRepository driverRepository){
-    //        this.driverRepository=driverRepository;
-    //    }
-    //    @Override
-    //    public List<Driver> getAllDrivers() {
-    //        return driverRepository.findAll();
-    //    }
-    //
-    //    @Override
-    //    public Driver getDriverById(Long id) {
-    //        return driverRepository.findById(String.valueOf(id)).orElse(null);
-    //    }
-    //
-    //    @Override
-    //    public void addDriver(Driver driver) {
-    // driverRepository.save(driver);
-    //    }
-    //
-    //    @Override
-    //    public void updateDriver(Long id, Driver updatedDriver) {
-    //
-    //    }
-    //
-    //    @Override
-    //    public void deleteDriver(Long id) {
-    //  driverRepository.deleteById(String.valueOf(id));
-    //    }
+     private final DriverRepository driverRepository;
+        public DriverServiceImpl(DriverRepository driverRepository){
+            this.driverRepository=driverRepository;
+        }
+        @Override
+        public List<Driver> getAllDrivers() {
+            return driverRepository.findAll();
+       }
+
+     @Override
+     public Driver getDriverById(Long id) {
+            return driverRepository.findById(String.valueOf(id)).orElse(null);
+        }
+
+       @Override
+        public void addDriver(Driver driver) {
+     driverRepository.save(driver);
+        }
+
+     @Override
+    public void updateDriver(Long id, Driver updatedDriver) {
+
+       }
+
+        @Override
+       public void deleteDriver(Long id) {
+     driverRepository.deleteById(String.valueOf(id));
+        }
 }
